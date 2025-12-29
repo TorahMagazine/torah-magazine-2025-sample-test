@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flipbook</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="left">
+      <div class="title">Flipbook</div>
+      <div class="hint">Extract All → open index.html • Click once to enable sound</div>
+    </div>
+    <div class="left" style="gap:10px">
+      <button id="prev">◀ Prev</button>
+      <div id="progress">—</div>
+      <button id="next">Next ▶</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="stage">
+      <div id="book">
+        <div class="spread">
+          <div class="page" id="pageLeft"><img alt="Left page" /></div>
+          <div class="page" id="pageRight"><img alt="Right page" /></div>
+          <div class="gutter"></div>
+        </div>
+        <div id="flipLayer"></div>
+      </div>
+    </div>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <audio id="flipSound" preload="auto">
+    <source src="sounds/page-flip.wav" type="audio/wav" />
+  </audio>
+
+  <script>
+    window.BOOK_PAGES = [
+      "pages/page01.jpg",
+      "pages/page02.jpg",
+      "pages/page03.jpg",
+      "pages/page04.jpg",
+      "pages/page05.jpg",
+      "pages/page06.jpg",
+      "pages/page07.jpg",
+      "pages/page08.jpg",
+      "pages/page09.jpg",
+      "pages/page10.jpg"
+    ];
+  </script>
+  <script src="js/app.js"></script>
+</body>
+</html>
